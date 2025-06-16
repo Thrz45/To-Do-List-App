@@ -1,0 +1,101 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111827;
+      background-image: url('https://readdy.ai/api/search-image?query=minimalist%20dark%20nature%20scene%20with%20mountains%20and%20stars%2C%20gradient%20dark%20blue%20to%20purple%20night%20sky%2C%20peaceful%20and%20serene%20landscape%2C%20low%20poly%20style%2C%20perfect%20for%20dark%20theme%20background&width=1920&height=1080&seq=1&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      }
+      .task-list {
+      max-height: 60vh;
+      overflow-y: auto;
+      }
+      .task-item {
+      transition: all 0.3s ease;
+      }
+      .task-item:hover {
+      background-color: rgba(31, 41, 55, 0.5);
+      }
+      .custom-checkbox {
+      position: relative;
+      cursor: pointer;
+      }
+      .custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .checkmark {
+      position: relative;
+      height: 24px;
+      width: 24px;
+      background-color: rgba(31, 41, 55, 0.5);
+      border: 2px solid rgba(156, 163, 175, 0.3);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      }
+      .custom-checkbox:hover .checkmark {
+      border-color: #4f46e5;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+      background-color: #4f46e5;
+      border-color: #4f46e5;
+      }
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+      display: block;
+      }
+      .completed-task {
+      text-decoration: line-through;
+      color: #9ca3af;
+      }
+      .delete-btn {
+      opacity: 0.7;
+      transition: all 0.2s ease;
+      }
+      .delete-btn:hover {
+      opacity: 1;
+      color: #ef4444;
+      }
+      .task-enter {
+      opacity: 0;
+      transform: translateY(-10px);
+      }
+      .task-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 300ms, transform 300ms;
+      }
+      .task-exit {
+      opacity: 1;
+      }
+      .task-exit-active {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 300ms, transform 300ms;
+      }
+      input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+      }
+      .empty-state {
+      color: #9ca3af;
+      }
+      @media (max-width: 640px) {
+      .container {
+      padding-left: 16px;
+      padding-right: 16px;
+      }
+      }
